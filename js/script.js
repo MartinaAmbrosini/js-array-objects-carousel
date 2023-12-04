@@ -44,27 +44,27 @@ const carousel =
         <div class="element active">
             <img src="${images[0].image}" alt="immagine">
             <div class="title">${images[0].title}</div>
-            <div class="description">${images[0].text}</div>
+            <div class="text">${images[0].text}</div>
         </div>
         <div class="element">
             <img src="${images[1].image}" alt="immagine">
             <div class="title">${images[1].title}</div>
-            <div class="description">${images[1].text}</div>
+            <div class="text">${images[1].text}</div>
         </div>
         <div class="element">
             <img src="${images[2].image}" alt="immagine">
             <div class="title">${images[2].title}</div>
-            <div class="description">${images[2].text}</div>
+            <div class="text">${images[2].text}</div>
         </div>
         <div class="element">
             <img src="${images[3].image}" alt="immagine">
             <div class="title">${images[3].title}</div>
-            <div class="description">${images[3].text}</div>
+            <div class="text">${images[3].text}</div>
         </div>
         <div class="element">
             <img src="${images[4].image}" alt="immagine">
             <div class="title">${images[4].title}</div>
-            <div class="description">${images[4].text}</div>
+            <div class="text">${images[4].text}</div>
         </div>
         <div class="next">
         <i class="fa-solid fa-chevron-left fa-4x"></i>
@@ -111,10 +111,10 @@ nextButton.addEventListener("click", function(){
    
 });
 
-// seleziono back-button
+// seleziono back
 const backButton = document.querySelector(".back");
 
-// azioni al click del bottone back
+// azioni per far si che al click del bottone back il mio carosello possa tornare indietro
 backButton.addEventListener("click", function(){
 
     if(activeElement > 0){
@@ -132,17 +132,17 @@ backButton.addEventListener("click", function(){
         // tolgo classe active
         removeClass("active");
 
-        // torno a ultimo indice 
+        // torno indice ultimo (?)
         activeElement = 4;
 
-        // aggiungo classe active al prossimo elemento
+        // aggiungo la classe active al prossimo elemento del carosello
         addClass("active");
     }
 });
 
 
-// FUNZIONI
-// aggiuno classe ad element
+// FUNZIONI GENERALI
+// aggiungo classe ad element
 function addClass(classname){
     element[activeElement].classList.add(classname);
 };
